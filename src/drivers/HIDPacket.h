@@ -12,7 +12,7 @@ private:
 public:
   HIDSimplePacket();
   /**
-  * Non blocking function to check if a packet is availible from the physical layer
+  * Non blocking function to check if a packet is available from the physical layer
   */
    bool isPacketAvailible();
   /**

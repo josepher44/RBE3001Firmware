@@ -1,7 +1,6 @@
 #include "main.h"
 
 #define  numberOfPid  3
-#define DUMMYLINKS
 // reportLength max size is 64 for HID
 Ticker pidTimer;
 static PIDBowler*  pid[numberOfPid];
@@ -18,6 +17,7 @@ void runPid(){
   for (int i=0;i<numberOfPid;i++)
       pid[i]->updateControl();
 }
+
 int main() {
 #if defined(DUMMYLINKS)
    pid[0] =(PIDBowler*) new DummyPID();
