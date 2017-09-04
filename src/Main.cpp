@@ -70,7 +70,7 @@ int main() {
    // Run a homing procedure to scale the velocity outputs  where 123 is the value of the encoder at home
    pid[0]->startHomingLink( CALIBRARTION_home_velocity, 123);
    */
-   coms.attach(new PidServer (pid, numberOfPid ));
+   coms.attach(new PidServer2 (pid, numberOfPid ));
    printf("\n\n Starting Core \n\n");
    RunEveryObject* print = new RunEveryObject(0,500);
     while(1) {
