@@ -12,6 +12,9 @@
 #include "main.h"
 #include "USBHID.h"
 #include "RunEvery.h"
+
+#include "../mbed-os/targets/TARGET_STM/TARGET_STM32F7/TARGET_STM32F746xG/TARGET_NUCLEO_F746ZG/PinNames.h"
+
 //GROUND     HDMI 19,9,8,7
 //3.3 volts  HDMI 18
 //Motor 8.4v HDMI 6,5,4 

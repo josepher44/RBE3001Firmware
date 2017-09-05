@@ -1,5 +1,5 @@
-#ifndef  Pid_server
-#define Pid_server
+#ifndef  Pid_server2
+#define Pid_server2
 #include <PID_Bowler.h>
 #include <PacketEvent.h>
 #include "../drivers/MyPid.h"
