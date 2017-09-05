@@ -5,9 +5,9 @@
 Ticker pidTimer;
 static PIDBowler*  pid[numberOfPid];
 HIDSimplePacket coms;
-float  calibrations[3] = {0,0,0};
+float  calibrations[3] = {-224,0,0};
 //float  calibrations[3] = {114,784,-10};
-
+//these are fake
 
 void runPid(){
   // update all positions fast and together
