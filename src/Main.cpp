@@ -24,6 +24,7 @@ int main() {
    pid[1] =(PIDBowler*) new DummyPID();
    pid[2] =(PIDBowler*) new DummyPID();
 #else
+   printf("hi");
    pid[0] = new PIDimp( new Servo(SERVO_1, 5),
                          new AS5050(MOSI, MISO, CLK, ENC_1));  // mosi, miso, sclk, cs
    pid[1] = new PIDimp( new Servo(SERVO_2, 5),
@@ -58,18 +59,18 @@ int main() {
      pid[i]->SetPIDTimed(0, 1000);
    }
 
-   /*
+/*
    // Run PID controller calibration
    // only one can be run at a time, and the control loop needs to wait
    // until the calibration is done before advancing to the next
    pid[0]->runPidHysterisisCalibration();
    // Run a homing procedure down where 123 is the value of the encoder at home
-   pid[0]->startHomingLink( CALIBRARTION_home_down, 123);
+   pid[0]->startHomingLink( CALIBRARTION_home_down, 0);
    // Run a homing procedure up  where 123 is the value of the encoder at home
-   pid[0]->startHomingLink( CALIBRARTION_home_up, 123);
+   pid[0]->startHomingLink( CALIBRARTION_home_up, 0);
    // Run a homing procedure to scale the velocity outputs  where 123 is the value of the encoder at home
-   pid[0]->startHomingLink( CALIBRARTION_home_velocity, 123);
-   */
+   pid[0]->startHomingLink( CALIBRARTION_home_velocity, 0);
+*/
    coms.attach(new PidServer2 (pid, numberOfPid ));
    printf("\n\n Starting Core \n\n");
    RunEveryObject* print = new RunEveryObject(0,500);

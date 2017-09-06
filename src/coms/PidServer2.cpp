@@ -21,6 +21,7 @@ void PidServer2::event(float * buffer){
       myPidObjects[i]->state.interpolate.set,
       0.01,
      0.01);
+    printf("PIDServer");
     // printf("\n  data index %i position = %f setpoint = %f target = %f update = %i time = %f",
     // i,
     // position,
@@ -36,6 +37,7 @@ void PidServer2::event(float * buffer){
       myPidObjects[i]->SetPIDEnabled( true);
       myPidObjects[i]->SetPIDTimed(setpoint, timeOfMotion);// go to setpoint in timeBetweenPrints ms, linear interpolation
       __enable_irq();
+
       // printf("\n Index %i Interpolation Set = %f ,  Start = %f , setTime = %f , startTime = %f",
       // i,
       // myPidObjects[i]->state.interpolate.set,

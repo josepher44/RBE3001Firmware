@@ -3,16 +3,20 @@
 
 #include "AS5050.h"
 #include "mbed.h"
+#include "../mbed-os/targets/TARGET_STM/TARGET_STM32F7/TARGET_STM32F746xG/TARGET_NUCLEO_F746ZG/PinNames.h"
 #include "../mbed-os/drivers/AnalogIn.h"
 #include "../mbed-os/drivers/AnalogOut.h"
 #include "drivers/Clock.h"
 #include "Servo.h"
+#include "mbed.h"
 #include "drivers/MyPid.h"
 #include "drivers/DummyPID.h"
 #include "drivers/HIDPacket.h"
 #include "main.h"
 #include "USBHID.h"
 #include "RunEvery.h"
+
+
 #include "../mbed-os/targets/TARGET_STM/TARGET_STM32F7/TARGET_STM32F746xG/TARGET_NUCLEO_F746ZG/PinNames.h"
 
 //GROUND     HDMI 19,9,8,7
