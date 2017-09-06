@@ -8,7 +8,7 @@ HIDSimplePacket coms;
 float  calibrations[3] = {-224,0,0};
 //float  calibrations[3] = {114,784,-10};
 //these are fake
-
+AnalogOut test(PA_4);
 void runPid(){
   // update all positions fast and together
   for (int i=0;i<numberOfPid;i++)
@@ -81,6 +81,8 @@ int main() {
           pid[0]->GetPIDPosition(),
           pid[1]->GetPIDPosition(),
           pid[2]->GetPIDPosition());
+          float analogValue = (pid[0]->GetPIDPosition()+987)/2290;
+          test.write(analogValue);
         }
 
 

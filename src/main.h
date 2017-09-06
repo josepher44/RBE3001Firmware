@@ -43,5 +43,6 @@
 #define LOAD_1 PA_3
 #define LOAD_2 PC_0
 #define LOAD_3 PC_3
+#define DAC_PIN PA_4
 
 #endif
