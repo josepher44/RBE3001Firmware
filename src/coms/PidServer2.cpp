@@ -64,7 +64,7 @@ void PidServer2::event(float * buffer){
   for(int i=0; i<myPumberOfPidChannels;i++){
 
     float position = myPidObjects[i]->GetPIDPosition();
-    float velocity =0;
+    float velocity = myPidObjects[i]->getVelocity();
     float torque = 0;
     // write upstream packets
     buffer[(i*3)+0] = position;

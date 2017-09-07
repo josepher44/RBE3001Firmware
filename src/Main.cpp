@@ -5,7 +5,7 @@
 Ticker pidTimer;
 static PIDBowler*  pid[numberOfPid];
 HIDSimplePacket coms;
-float  calibrations[3] = {-224,0,0};
+float  calibrations[3] = {0,1992,1152};
 //float  calibrations[3] = {114,784,-10};
 //these are fake
 AnalogOut test(PA_4);
@@ -24,7 +24,6 @@ int main() {
    pid[1] =(PIDBowler*) new DummyPID();
    pid[2] =(PIDBowler*) new DummyPID();
 #else
-   printf("hi");
    pid[0] = new PIDimp( new Servo(SERVO_1, 5),
                          new AS5050(MOSI, MISO, CLK, ENC_1));  // mosi, miso, sclk, cs
    pid[1] = new PIDimp( new Servo(SERVO_2, 5),
