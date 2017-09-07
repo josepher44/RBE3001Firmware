@@ -8,7 +8,7 @@ HIDSimplePacket coms;
 float  calibrations[3] = {0,1992,1152};
 //float  calibrations[3] = {114,784,-10};
 //these are fake
-AnalogOut test(PA_4);
+AnalogOut test(PA_4); //Instantiates pin PA_4 as an AnalogOut for the DAC
 void runPid(){
   // update all positions fast and together
   for (int i=0;i<numberOfPid;i++)
@@ -84,8 +84,8 @@ int main() {
           pid[0]->GetPIDPosition(),
           pid[1]->GetPIDPosition(),
           pid[2]->GetPIDPosition());
-          float analogValue = (pid[0]->GetPIDPosition()+987)/2290;
-          test.write(analogValue);
+          float analogValue = (pid[0]->GetPIDPosition()+987)/2290; //Converts the encoder values from ticks to an analog float from 0-1
+          test.write(analogValue); //Writes the calculated analogValue to pin PA_4
         }
 
 
