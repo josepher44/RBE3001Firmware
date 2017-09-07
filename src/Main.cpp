@@ -5,7 +5,7 @@
 Ticker pidTimer;
 static PIDBowler*  pid[numberOfPid];
 HIDSimplePacket coms;
-float  calibrations[3] = {0,1992,1152};
+float  calibrations[3] = {1847,1992,1155};
 //float  calibrations[3] = {114,784,-10};
 //these are fake
 AnalogOut test(PA_4); //Instantiates pin PA_4 as an AnalogOut for the DAC
